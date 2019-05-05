@@ -1,0 +1,24 @@
+# CS372 - Project 1
+Craig Ricker
+May 5th, 2019
+
+## Running server
+To run the server, simply type "./chatserve <PORT#>".
+Ensure that port# is currently open and available. 
+If not, program will fail and you will have to rerun from the command line.
+
+The script will prompt the user to enter a username, and then wait for a user to connect.
+Once the user connects, they will alternate sending messages back and forth.
+When either user types \quit, the connection will close, and the client will exit.
+The server will remain openly running, and begin waiting for a new connection.
+
+## Building client
+Within the active directory, type "make client"
+
+## Running client
+In the command prompt, type  "./chatclient <SERVER-HOSTNAME> <PORT#>"
+Replacing information within <> with valid host name and port
+The client will then prompt the user to enter  a screen name, and then prompt for a first message.
+
+Once the user connects, they will alternate sending messages back and forth.
+When either user types \quit, the connection will close, and the client will exit.
