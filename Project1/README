@@ -2,8 +2,11 @@
 Craig Ricker
 May 5th, 2019
 
-## Building Server
-In command line type "make server" this will simply give execute access to server
+## Building Server & Client
+In command line type "make all" this will simply give execute access to server and actually compile the client
+
+## Testing Machine
+This code was developed on an OSX machine, but tested with the server on flip3, and client on flip2. It successfully connected and chatted across servers.
 
 ## Running server
 To run the server, simply type "./chatserve <PORT#>".
@@ -14,9 +17,6 @@ The script will prompt the user to enter a username, and then wait for a user to
 Once the user connects, they will alternate sending messages back and forth.
 When either user types \quit, the connection will close, and the client will exit.
 The server will remain openly running, and begin waiting for a new connection.
-
-## Building client
-Within the active directory, type "make client"
 
 ## Running client
 It is *very* important the server is running before the client.
