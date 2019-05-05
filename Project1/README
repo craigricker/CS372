@@ -2,6 +2,9 @@
 Craig Ricker
 May 5th, 2019
 
+## Building Server
+In command line type "make server" this will simply give execute access to server
+
 ## Running server
 To run the server, simply type "./chatserve <PORT#>".
 Ensure that port# is currently open and available. 
@@ -16,9 +19,14 @@ The server will remain openly running, and begin waiting for a new connection.
 Within the active directory, type "make client"
 
 ## Running client
+It is *very* important the server is running before the client.
 In the command prompt, type  "./chatclient <SERVER-HOSTNAME> <PORT#>"
 Replacing information within <> with valid host name and port
 The client will then prompt the user to enter  a screen name, and then prompt for a first message.
 
 Once the user connects, they will alternate sending messages back and forth.
 When either user types \quit, the connection will close, and the client will exit.
+
+
+## Extra Credit
+I added proper SIGINT handling to the py server
