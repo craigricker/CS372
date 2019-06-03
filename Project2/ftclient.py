@@ -152,8 +152,6 @@ if __name__ == "__main__":
     else:
         host = sys.argv[1]
         # Add eng info if using flip
-        if host == "flip1" or host == "flip2":
-            host = ".engr.oregonstate.edu"
         port = int(sys.argv[2])
         # Data port is last one, uses trick
         data_port = sys.argv[-1]
