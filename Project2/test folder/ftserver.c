@@ -65,6 +65,31 @@ struct addrinfo *createConnection(char *addr, char *port) {
 }
 
 /*
+ * Creates a connection to the socket
+ * Pre condition: input has been validated and is working
+ * Inputs:  addr, address to connect to
+ *          port: port to connect to
+ * Returns: new connection
+ * Post Conditions:
+ */
+struct addrinfo *openConnection(char *port) {
+   struct addrinfo hints;
+   struct addrinfo *res;
+   int status = 0;
+   memset(&hints, 0, sizeof hints);
+   // Setup for TCP style connection
+   hints.ai_family = AF_INET;
+   hints.ai_socktype = SOCK_STREAM;
+   hints.ai_flags = AI_PASSIVE;
+   if ((status = getaddrinfo(NULL, port, &hints, &res)) != 0) {
+      error(2, "Error establishing connection.\n");
+   }
+   return res;
+}
+
+
+
+/*
  * Creates a socket to conn
  * Pre condition: conn is valid
  * Inputs: conn a valid struct
