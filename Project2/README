@@ -1,0 +1,17 @@
+It is best if ftserver.c and ftclient.py are running in seperate directories.
+However, unique file descripters can and will be added if running from the same directory.
+
+This program was tested on flip1 and flip 2.
+
+To compile all the programs type "make all". This will do the following:
+- compile ftserver
+- add executable permissions to ftserver and ftclient.py
+
+To start the server, type the following in the command line:
+./ftserver [PORT_NUMBER] 
+Where port number is a valid port number
+In a seperate window, to start the client type one of the two following commands:
+To see the list of files:
+python3 ftclient.py [SERVER_HOST (flip1-3)] [ftserver PORT_NUMBER] -l [DATA_PORT]
+To download a specific file from the directory
+python3 ftclient.py [SERVER_HOST (flip1-3)] [ftserver PORT_NUMBER] -g [FILE_NAME] [DATA_PORT]
