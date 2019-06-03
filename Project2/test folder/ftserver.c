@@ -330,7 +330,7 @@ int main(int argc, char *argv[]) {
    if ((port_n >65535) || (port_n < 10000))
       error(1, "Enter a valid port number\n");
    printf("Server open on %s\n", argv[1]);
-   struct addrinfo* res = createConnection(NULL, argv[1]);
+   struct addrinfo* res = openConnection(argv[1]);
    int sockfd = createSocket(res);
    bindSocket(sockfd, res);
    listenSocket(sockfd);
